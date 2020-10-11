@@ -61,8 +61,6 @@ app.controller("resultController", [
 
             }
 
-            winningResultIsLessThan11();
-
             if (
                 dataIsValid() &&
                 !resultIsLessThan11() &&
