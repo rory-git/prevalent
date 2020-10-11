@@ -7,6 +7,9 @@ app.controller("playerController", [
         $scope.league = mainService.league;
 
         $scope.addPlayer = (player) => {
+            if(!player.name) {
+                return alert('please enter a name');
+            }
             mainService.findPlayer(player.name);
 
             if(mainService.findPlayer(player.name)) {
